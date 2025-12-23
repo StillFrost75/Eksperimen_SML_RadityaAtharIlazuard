@@ -57,7 +57,8 @@ best_params = grid_search.best_params_
 # ==============================================================================
 print("Menyimpan hasil Manual Logging...")
 
-with mlflow.start_run(run_name="Manual_Logging_Best_Model"):
+# Tambahkan nested=True agar aman dijalankan via GitHub Actions
+with mlflow.start_run(run_name="Manual_Logging_Best_Model", nested=True):
     mlflow.autolog() 
     # A. LOG PARAMETERS
     for param, value in best_params.items():

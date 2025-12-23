@@ -36,7 +36,8 @@ mlflow.sklearn.autolog()
 
 print("Mulai training model basic (Pure Autolog)...")
 
-with mlflow.start_run(run_name="Basic_Training_Autolog_Only"):
+with mlflow.start_run(run_name="Basic_Training_Autolog_Only", nested=True):
+     mlflow.autolog() ):
     
     # Inisialisasi Model
     rf = RandomForestClassifier(n_estimators=100, random_state=42)
