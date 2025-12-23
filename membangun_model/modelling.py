@@ -32,12 +32,11 @@ mlflow.set_experiment("Eksperimen_Heart_Disease_Basic")
 # ==============================================================================
 # Kita aktifkan autolog TANPA parameter log_models=False.
 # Biarkan dia default (True), jadi dia otomatis simpan model, param, metric.
-mlflow.sklearn.autolog()
+mlflow.sklearn.autolog(log_models=False)
 
 print("Mulai training model basic (Pure Autolog)...")
 
-with mlflow.start_run(run_name="Basic_Training_Autolog_Only", nested=True):
-     mlflow.autolog() ):
+with mlflow.start_run(run_name="Basic_Training_Autolog_Only", ):
     
     # Inisialisasi Model
     rf = RandomForestClassifier(n_estimators=100, random_state=42)

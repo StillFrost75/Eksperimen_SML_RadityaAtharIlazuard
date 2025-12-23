@@ -59,7 +59,7 @@ print("Menyimpan hasil Manual Logging...")
 
 # Tambahkan nested=True agar aman dijalankan via GitHub Actions
 with mlflow.start_run(run_name="Manual_Logging_Best_Model", nested=True):
-    mlflow.autolog() 
+    mlflow.autolog(log_models=False) 
     # A. LOG PARAMETERS
     for param, value in best_params.items():
         mlflow.log_param(param, value)
