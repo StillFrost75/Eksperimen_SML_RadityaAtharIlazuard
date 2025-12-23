@@ -25,7 +25,7 @@ X_train, X_test, y_train, y_test, preprocessor = preprocess_data(df)
 # ==============================================================================
 # 2. EXPERIMENT SETUP
 # ==============================================================================
-mlflow.set_experiment("Eksperimen_Heart_Disease_Basic")
+#mlflow.set_experiment("Eksperimen_Heart_Disease_Basic")
 
 # ==============================================================================
 # 3. TRAINING DENGAN PURE AUTOLOG (Syarat Basic)

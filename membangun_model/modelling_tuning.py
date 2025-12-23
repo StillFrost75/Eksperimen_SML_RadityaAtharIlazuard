@@ -34,8 +34,9 @@ X_train, X_test, y_train, y_test, preprocessor = preprocess_data(df)
 # ==============================================================================
 # 2. HYPERPARAMETER TUNING
 # ==============================================================================
-mlflow.set_experiment("Eksperimen_Heart_Disease_Tuning")
+#mlflow.set_experiment("Eksperimen_Heart_Disease_Tuning")
 # Autolog untuk mencatat proses tuning, tapi model final kita log manual
+mlflow.autolog(log_models=False)
 
 
 print("Mulai Grid Search...")
@@ -58,8 +59,8 @@ best_params = grid_search.best_params_
 print("Menyimpan hasil Manual Logging...")
 
 # Tambahkan nested=True agar aman dijalankan via GitHub Actions
-with mlflow.start_run(run_name="Manual_Logging_Best_Model", nested=True):
-    mlflow.autolog(log_models=False) 
+with mlflow.start_run(run_name="Manual_Logging_Best_Model", nested=True): 
+
     # A. LOG PARAMETERS
     for param, value in best_params.items():
         mlflow.log_param(param, value)
