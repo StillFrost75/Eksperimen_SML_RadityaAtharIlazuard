@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Documents/Eksperimen_SML_RadityaAtharIlazuard/membangun_model/mlruns/444646591829287468/d6bb88d4f9c54a62aef2dea63e724ee0/artifacts
+end_time: 1766419092635
+entry_point_name: ''
+experiment_id: '444646591829287468'
+lifecycle_stage: active
+run_id: d6bb88d4f9c54a62aef2dea63e724ee0
+run_name: Basic_Training
+run_uuid: d6bb88d4f9c54a62aef2dea63e724ee0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766419067415
+status: 3
+tags: []
+user_id: Athar
