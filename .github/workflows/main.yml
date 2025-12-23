@@ -29,7 +29,7 @@ jobs:
     # 4. Execute MLflow Project: Jalankan training
     - name: Run Model Training (Skilled)
       run: |
-        cd Membangun_model
+        cd membangun_model
         mlflow run . --entry-point tuning --env-manager=local
 
     # 5. Upload Artifacts: Simpan hasil training
@@ -37,4 +37,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: mlflow-experiment-runs
-        path: Membangun_model/mlruns
+        path: membangun_model/mlruns
